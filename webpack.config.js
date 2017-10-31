@@ -4,7 +4,8 @@ var path = require("path"),
 module.exports = {
     entry: {
         controller: path.resolve(__dirname, "./src/javascript/controller.js"),
-        app: path.resolve(__dirname, "./src/javascript/app.js")
+        app: path.resolve(__dirname, "./src/javascript/app.js"),
+        summary: path.resolve(__dirname, "./src/javascript/summary.js")
     },
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -27,6 +28,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "app.html",
             template: "./src/html/app.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            filename: "summary.html",
+            template: "./src/html/summary.html",
             inject: false
         })
     ],

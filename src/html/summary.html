@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Structured Object Renderer</title>
+
+    <!-- Include Symphony's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://symphony.com/resources/api/v1.1/symphony-style.css">
+
+    <style>
+    	.hidden {
+    		display: none;
+    	}
+
+    	.blurb {
+    		line-height: 1.5;
+    	}
+
+        .subtitle {
+    		font-style: italic;
+    		font-weight: bold;
+    	}
+
+    	.module-text-input {
+    		width: 200px !important;
+    	}
+
+    </style>
+</head>
+
+<!-- 
+See app.js for how the user's theme (light or dark) and font size (large, normal, small, xsmall) are detected and applied.
+-->
+<body>
+    <h3 style="display:inline-block">TRADE SUMMARY: BUY 42 shares $TSLA @ 341.00</h3>
+    <button id="confirm" class="button primary" style="margin-left: 50px">Send to Trader</button>
+    
+
+    <!-- Add the appropriate classes to buttons -->
+    <div class="row">
+        <div class="col-xs-12">
+                <img src="/tsla.png" alt="" style="max-width:100%; max-height: 300px" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10">
+            <span>Open: 342.35 High: 343.44 Low: 338.76</span>
+        </div>
+    </div>
+
+    <!-- Include Symphony's Client Extension API javascript -->
+    <script type="text/javascript" src="https://www.symphony.com/resources/api/v1.0/symphony-api.js" charset="utf-8"></script>
+    <!-- Include the app view javascript. This file is generated when running the npm webpack commands.  -->
+    <script type="text/javascript" src="summary.bundle.js" charset="utf-8"></script>
+</body>
+</html>

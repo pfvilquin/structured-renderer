@@ -2,12 +2,13 @@
   "applications": [
     {
       "type": "sandbox",
-      "id": "hello",
-      "name": "Hello World",
-      "blurb": "This is a hello world app with a few example extension API invocations!",
-      "publisher": "Symphony",
+      "id": "pwmDemo",
+      "name": "PWM Demo",
+      "blurb": "PWM demo app",
+      "publisher": "Symphony Platform Solutions",
       "url": "https://localhost:4000/controller.html",
       "domain": "localhost"
     }
   ]
 }
+
