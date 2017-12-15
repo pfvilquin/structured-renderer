@@ -22,7 +22,7 @@
 var helloControllerService = SYMPHONY.services.register("pwmDemo:controller");
 
 // This is the message controller service, to be used for static and dynamic rendering
-var messageControllerService = SYMPHONY.services.register("message:controller");
+var messageControllerService = SYMPHONY.services.register("pwmDemoEntity:controller");
 
 // All Symphony services are namespaced with SYMPHONY
 SYMPHONY.remote.hello().then(function(data) {
@@ -30,7 +30,7 @@ SYMPHONY.remote.hello().then(function(data) {
     // Register our application with the Symphony client:
     // Subscribe the application to remote (i.e. Symphony's) services
     // Register our own local services
-    SYMPHONY.application.register("pwmDemo", ["ui","entity"], ["pwmDemo:controller", "message:controller"]).then(function(response) {
+    SYMPHONY.application.register("pwmDemo", ["ui","entity"], ["pwmDemo:controller", "pwmDemoEntity:controller"]).then(function(response) {
 
         // The userReferenceId is an anonymized random string that can be used for uniquely identifying users.
         // The userReferenceId persists until the application is uninstalled by the user. 
@@ -46,7 +46,7 @@ SYMPHONY.remote.hello().then(function(data) {
         entityService.registerRenderer(
             "com.symphony.fa",
             {},
-            "message:controller"
+            "pwmDemoEntity:controller"
         );
 
         // The list of entities to track for dynamic rendering each entity individually
