@@ -81,7 +81,7 @@ SYMPHONY.remote.hello().then(function(data) {
                 if( entityData.version === "1.0" ) {
                     template = `<messageML>
                     <hash tag="#tradeAlert"/>
-                                  <iframe src="https://so-extension-app.firebaseapp.com/app.html?email=`+email+`&alert=true" height="400" width="300"></iframe>
+                                  <iframe src="https://localhost:4000/app.html?email=`+email+`&amp;alert=true" height="400" width="300"></iframe>
                                </messageML>`
                 } 
                 return {
