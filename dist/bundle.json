@@ -6,8 +6,8 @@
       "name": "PWM Demo",
       "blurb": "PWM demo app",
       "publisher": "Symphony Platform Solutions",
-      "url": "https://localhost:4000/controller.html",
-      "domain": "localhost"
+      "url": "https://so-extension-app.firebaseapp.com/controller.html",
+      "domain": "so-extension-app.firebaseapp.com"
     }
   ]
 }
